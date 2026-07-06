@@ -166,14 +166,14 @@ export async function POST(req: NextRequest) {
       existing = { ...existing, ...profilePayload };
 
       if (isCreated && role === "assessor") {
-        const { data: adminProfile } = await supabaseAdmin
+        const { data: adminProfile } = (await supabaseAdmin
           .from("profil")
           .select("id")
           .eq("role", "admin")
-          .maybeSingle();
+          .maybeSingle()) as { data: { id: string } | null };
 
         if (adminProfile?.id) {
-          await supabaseAdmin.from("log_aktivitas").insert({
+          await (supabaseAdmin.from("log_aktivitas") as any).insert({
             actor_id: adminProfile.id,
             actor_role: "admin",
             activity_type: "tambah_asesor",
@@ -208,7 +208,6 @@ export async function POST(req: NextRequest) {
       }
     }
 
-
     if (signInResult.error || !signInResult.data.session?.access_token) {
       return NextResponse.json(
         { error: "Gagal membuat sesi login: " + (signInResult.error?.message || "Session tidak tersedia") },
@@ -230,5 +229,3 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: err.message }, { status: 500 });
   }
 }
-
-
