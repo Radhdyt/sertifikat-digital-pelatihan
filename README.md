@@ -4,13 +4,15 @@ Aplikasi full-stack untuk penerbitan dan verifikasi sertifikat digital pelatihan
 
 > **Live demo:** [sertifikat-digital-pelatihan.vercel.app](https://sertifikat-digital-pelatihan.vercel.app)
 
+> **Tugas Akhir:** proyek ini dikembangkan sebagai Tugas Akhir Program Studi S1 Teknik Informatika, Universitas Telkom.
+
 ## Masalah yang Dipecahkan
 
 Sertifikat pelatihan konvensional (PDF biasa) mudah dipalsukan dan sulit diverifikasi keasliannya. Solusi ini menjadikan sertifikat sebagai aset on-chain yang:
 
-- **Anti-fraud** — kepemilikan tercatat di blockchain, tidak bisa dipalsukan.
-- **Verifiable tanpa login** — siapa pun bisa cek keaslian lewat halaman publik.
-- **Non-transferable** — melekat ke pemilik (Soulbound Token), tidak bisa dipindahtangankan, cocok untuk kredensial.
+- **Anti-fraud**: kepemilikan tercatat di blockchain, tidak bisa dipalsukan.
+- **Verifiable tanpa login**: siapa pun bisa cek keaslian lewat halaman publik.
+- **Non-transferable**: melekat ke pemilik (Soulbound Token), tidak bisa dipindahtangankan, cocok untuk kredensial.
 
 ## Fitur Utama
 
@@ -61,4 +63,4 @@ Build & deploy otomatis ke **Vercel** dari branch main. Sertifikat produksi dapa
 
 ## Lisensi
 
-Private project. Kontak untuk akses atau kolaborasi: github.com/Radhdyt
+Semua hak dilindungi. Kode dipublikasikan sebagai portofolio dan tidak dimaksudkan untuk digunakan ulang tanpa izin. Kontak: github.com/Radhdyt
